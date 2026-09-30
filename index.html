@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buat Kamu</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- MUSIK -->
+    <audio id="music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- =========================
+         HALAMAN 1
+    ========================== -->
+
+    <section class="page active" id="page1">
+
+        <div class="opening">
+
+            <p class="small-text">eh, bentar...</p>
+
+            <h1>
+                aku bikin<br>
+                sesuatu buat kamu.
+            </h1>
+
+            <p class="description">
+                sebenernya aku juga bingung mau bikin apa 😭<br>
+                tapi yaudah, daripada cuma bilang lewat chat.
+            </p>
+
+            <button onclick="nextPage(2)">
+                Lihat →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN 2
+         PASSWORD
+    ========================== -->
+
+    <section class="page" id="page2">
+
+        <div class="card">
+
+            <div class="emoji">🔐</div>
+
+            <h2>Sebelum lanjut...</h2>
+
+            <p>
+                coba masukin sesuatu<br>
+                yang harusnya kamu tau.
+            </p>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="coba tebak..."
+            >
+
+            <button onclick="checkPassword()">
+                Buka
+            </button>
+
+            <p id="wrongPassword"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN 3
+         HADIAH
+    ========================== -->
+
+    <section class="page" id="page3">
+
+        <div class="gift-page">
+
+            <p class="small-text">nah, kebuka juga</p>
+
+            <h1>
+                ada sesuatu buat kamu 🎁
+            </h1>
+
+            <div class="gift" onclick="openGift()">
+
+                <div class="gift-lid"></div>
+
+                <div class="gift-box">
+                    <div class="ribbon"></div>
+                </div>
+
+            </div>
+
+            <p id="giftText">
+                coba pencet hadiahnya
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN 4
+         BUNGA
+    ========================== -->
+
+    <section class="page" id="page4">
+
+        <div class="bouquet-page">
+
+            <p class="small-text">ini buat kamu</p>
+
+            <h1>
+                bunganya jangan ditolak 🌷
+            </h1>
+
+            <div class="flowers">
+
+                <div class="flower">🌷</div>
+                <div class="flower">🌸</div>
+                <div class="flower">🌼</div>
+                <div class="flower">🌷</div>
+                <div class="flower">🌸</div>
+
+            </div>
+
+            <p>
+                gatau ya kenapa pilih bunga.<br>
+                tapi kaya lucu aja kalau ada bunga di sini 
+            </p>
+
+            <button onclick="nextPage(5)">
+                Lanjut →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN 5
+         SURAT
+    ========================== -->
+
+    <section class="page" id="page5">
+
+        <div class="letter-card">
+
+            <p class="small-text">sedikit tulisan</p>
+
+            <h1>buat kamu</h1>
+
+            <div class="letter">
+
+                <p>
+                    HAII
+                </p>
+
+                <p>
+                    aku ngga begitu ahli ya dalam berkata kata,
+                    jadi aku tulis seadanya ~
+            
+                </p>
+
+                <p>
+                    selamat yaa karena sudah menginjak umur 18
+                    
+                </p>
+
+                <p>
+                    terimakasih buat obrolan random,
+                    candaan, dan hal-hal kecil lainnya.
+                    mungkin menurut kamu biasa aja,
+                    tapi ternyata lumayan seru buat aku.
+                </p>
+
+                <p>
+                    aku gamau bikin terlalu serius sih,
+                    tapi aku senang bisa menjadi salah 1 orang yang kenal dekat denganmu
+                
+                    
+                </p>
+
+                <p>
+                    semoga hal-hal yang lagi kamu usahain
+                    bisa berjalan lancar.
+                    semoga sekolah, rencana, dan urusan kamu
+                    juga dipermudah.
+                </p>
+
+                <p>
+                    dan semoga ke depannya
+                    kamu punya lebih banyak alasan buat seneng.
+                </p>
+
+                <p>
+                    udah sih...
+                    kalau kepanjangan nanti aku malah malu sendiri 😭
+                </p>
+
+                <p class="signature">
+                    — dari aku :)
+                </p>
+
+            </div>
+
+            <button onclick="nextPage(6)">
+                Lanjut →
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- =========================
+         HALAMAN 6
+         MUSIK
+    ========================== -->
+
+    <section class="page" id="page6">
+
+        <div class="music-page">
+
+            <div class="music-icon">
+                ♪
+            </div>
+
+            <p class="small-text">coba dengerin ini</p>
+
+            <h1>
+                ada satu lagu
+            </h1>
+
+            <p>
+                gaada maksud yang aneh-aneh kok <br>
+                aku cuma pengen kamu dengerin.
+            </p>
+
+            <button onclick="toggleMusic()" id="musicButton">
+                ▶ Putar lagu
+            </button>
+
+            <button class="secondary" onclick="nextPage(8)">
+                Lanjut →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN 7
+         JAR
+    ========================== -->
+
+    <section class="page" id="page7">
+
+        <div class="jar-page">
+
+            <p class="small-text">coba ambil satu</p>
+
+            <h1>
+                beberapa hal yang aku suka dari kamu
+            </h1>
+
+            <div class="jar" onclick="showReason()">
+
+                <div class="jar-lid"></div>
+
+                <div class="jar-body">
+
+                    <span>✦</span>
+                    <span>♡</span>
+                    <span>✧</span>
+                    <span>☆</span>
+                    <span>♡</span>
+
+                </div>
+
+            </div>
+
+            <div id="reasonBox">
+                pencet toplesnya 
+            </div>
+
+            <button onclick="nextPage(9)">
+                Terakhir →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN 8
+         PENUTUP
+    ========================== -->
+
+    <section class="page" id="page8">
+
+        <div class="ending">
+
+            <div class="confetti">
+                ✦ ✧ ☆ ✦ ✧
+            </div>
+
+            <p class="small-text">
+                oh iya, hampir lupa...
+            </p>
+
+            <h1>
+                Selamat ulang tahun yaa mas bimaa
+            </h1>
+
+            <p class="ending-text">
+                semoga di umur yang baru ini
+                banyak hal baik yang datang ke kamu.
+            </p>
+
+            <p class="ending-text">
+                semoga semua yang lagi kamu usahain
+                bisa berjalan lancar.
+            </p>
+
+            <p class="ending-text">
+                jangan lupa istirahat,
+                jangan terlalu keras sama diri sendiri,
+                dan tetap semangat ya.
+            </p>
+
+            <p class="final-note">
+                udah, segitu aja <br>
+                semoga kamu seneng~.
+            </p>
+
+            <button onclick="restart()">
+                ↻ Ulangi
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
